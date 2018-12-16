@@ -1,3 +1,4 @@
+import "./combined"
 import 'bootstrap';
 import '../scss/index.scss'
 // import '../scss/main.css';
