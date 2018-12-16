@@ -1,12 +1,13 @@
 import 'bootstrap';
-import '../scss/main.css';
-import '../scss/input-elements.css';
+import '../scss/index.scss'
+// import '../scss/main.css';
+// import '../scss/input-elements.css';
 // From Webpack Basics 2
 import { secretParagraph, secretButton } from './dom-loader';
 
 import { groupBy } from 'lodash-es';
 import people from './people';
-import '../scss/style.scss';
+// import '../scss/style.scss';
 import './image-example';
 
 
