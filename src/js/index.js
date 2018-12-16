@@ -1,3 +1,4 @@
+import 'bootstrap';
 import '../scss/main.css';
 import '../scss/input-elements.css';
 // From Webpack Basics 2
