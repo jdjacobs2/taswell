@@ -17,8 +17,8 @@ google.charts.load('current', {packages: ['corechart', 'table']});
 function drawElec() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
 
-//    query.setQuery('SELECT A, B, C, D, E, F, G label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
-    query.setQuery('SELECT A, B, D, F where D = "Elec"');
+//    query.setQuery('SELECT A, B, C, D, E, F label A "Equipment", B "Number", C "Category", D "Install Date", E "Id", F "Photo"');
+    query.setQuery('SELECT A, B, D where C  = "Elec"');
 
     query.send(handleElecQueryResponse);
 }
@@ -45,8 +45,8 @@ google.charts.setOnLoadCallback(drawElec);
 function drawMechVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
 
-//    query.setQuery('SELECT A, B, C, D, E, F, G label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
-    query.setQuery('SELECT A, B, D, F  where D = "Mech"');
+//    query.setQuery('SELECT A, B, C, D, E, F label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
+    query.setQuery('SELECT A, B, D where C = "Mech"');
 
     query.send(handleMechQueryResponse);
 }
@@ -74,7 +74,7 @@ function drawHullVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
 
 //    query.setQuery('SELECT A, B, C, D, E, F, G label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
-    query.setQuery('SELECT A, B, D, F  where D = "Hull"');
+    query.setQuery('SELECT A, B, D where C = "Hull"');
 
     query.send(handleHullQueryResponse);
 }
@@ -102,7 +102,7 @@ function drawNavVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
 
 //    query.setQuery('SELECT A, B, C, D, E, F, G label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
-    query.setQuery('SELECT A, B, D, F  where D = "Nav"');
+    query.setQuery('SELECT A, B, D  where C = "Nav"');
 
     query.send(handleNavQueryResponse);
 }
@@ -130,7 +130,7 @@ function drawSafetyVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
 
 //    query.setQuery('SELECT A, B, C, D, E, F, G label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
-    query.setQuery('SELECT A, B, D, F  where D = "Safety"');
+    query.setQuery('SELECT A, B, D where C  = "Safety"');
 
     query.send(handleSafetyQueryResponse);
 }
@@ -159,7 +159,7 @@ function drawSailsVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
 
 //    query.setQuery('SELECT A, B, C, D, E, F, G label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
-    query.setQuery('SELECT A, B, D, F  where D = "Sails"');
+    query.setQuery('SELECT A, B, D  where C = "Sails"');
 
     query.send(handleSailsQueryResponse);
 }

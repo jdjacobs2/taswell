@@ -1,5 +1,6 @@
-import "./combined"
 import 'bootstrap';
+import "./combined"
+import "../scss/lightbox.css"
 import '../scss/index.scss'
 // import '../scss/main.css';
 // import '../scss/input-elements.css';
