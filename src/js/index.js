@@ -1,11 +1,16 @@
+import img1 from '../img/3933.jpg';
 import 'bootstrap';
 import "./combined"
 import "../scss/lightbox.css"
 import '../scss/index.scss'
+
+
+
+// Following code from Webpack Basics 2 from interntet
 // import '../scss/main.css';
 // import '../scss/input-elements.css';
 // From Webpack Basics 2
-import { secretParagraph, secretButton } from './dom-loader';
+/*import { secretParagraph, secretButton } from './dom-loader';
 
 import { groupBy } from 'lodash-es';
 import people from './people';
@@ -49,4 +54,4 @@ function updateSecretParagraph() {
   } else {
     secretParagraph.style.display = 'none';
   }
-}
+}*/
