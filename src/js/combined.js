@@ -129,8 +129,14 @@ function handleNavQueryResponse(response) {
             column = 3;
             let msg = ['column-index is ' + column];
             msg.push('row-index is ' + selection[selection.length - 1].row);
-            msg.push('value of clicked cell is: ' + data.getValue(selection[selection.length - 1].row, column));
-            alert(msg.join('\n---------\n'));
+            let cellValue = data.getValue(selection[selection.length - 1].row, column);
+            msg.push('value of clicked cell is: ' + cellValue);
+            if (/img src/.test(cellValue)) {
+                alert(msg.join('\n---------\n'));
+                showPhoto(cellValue);
+            } else {
+                alert('No photo for this selection');
+            }
 
             // if (selection.length && cell !== cell.parentNode.firstChild) {
             //     for (var i = 0; i < cell.parentNode.childNodes.length; ++i) {
@@ -160,10 +166,14 @@ function handleNavQueryResponse(response) {
 
     });
     visualization.draw(data, {
-        allowHtml: true,
-        showRowNumber: true
+        allowHtml: true
+        // showRowNumber: true
     });
 };
+
+function showPhoto(url) {
+    
+}
 
 google.charts.setOnLoadCallback(drawNavVisualization);
 
