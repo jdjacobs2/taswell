@@ -126,30 +126,36 @@ function handleNavQueryResponse(response) {
         document.querySelector('#navTable tbody').addEventListener('click', function (e) {
             var cell = e.srcElement || e.target, column = null;
             let selection = visualization.getSelection();
-            if (selection.length && cell !== cell.parentNode.firstChild) {
-                for (var i = 0; i < cell.parentNode.childNodes.length; ++i) {
-                    if (cell.parentNode.childNodes[i] === cell) {
-                        column = i - 1;
-                        break;
-                    }
-                }
-                if (column !== null) {
-                    var msg = ['column-index is ' + column];
-                    // var selection = visualization.getSelection();
-                    //if current row has been selected
-                    if (/\bgoogle-visualization-table-tr-sel\b/.test(cell.parentNode.className)) {
-                        msg.push('row-index is ' + selection[selection.length - 1].row);
-                        msg.push('value of clicked cell is:' + data.getValue(selection[selection.length - 1].row,
-                            column));
-                    } else {
-                        msg.push('current row is not selected');
-                    }
+            column = 3;
+            let msg = ['column-index is ' + column];
+            msg.push('row-index is ' + selection[selection.length - 1].row);
+            msg.push('value of clicked cell is: ' + data.getValue(selection[selection.length - 1].row, column));
+            alert(msg.join('\n---------\n'));
 
-                    alert(msg.join('\n---------\n'))
-                }
-            } else {
-                alert('no row selected');
-            }
+            // if (selection.length && cell !== cell.parentNode.firstChild) {
+            //     for (var i = 0; i < cell.parentNode.childNodes.length; ++i) {
+            //         if (cell.parentNode.childNodes[i] === cell) {
+            //             column = i - 1;
+            //             break;
+            //         }
+            //     }
+            //     if (column !== null) {
+            //         var msg = ['column-index is ' + column];
+            //         // var selection = visualization.getSelection();
+            //         //if current row has been selected
+            //         if (/\bgoogle-visualization-table-tr-sel\b/.test(cell.parentNode.className)) {
+            //             msg.push('row-index is ' + selection[selection.length - 1].row);
+            //             msg.push('value of clicked cell is:' + data.getValue(selection[selection.length - 1].row,
+            //                 column));
+            //         } else {
+            //             msg.push('current row is not selected');
+            //         }
+
+            //         alert(msg.join('\n---------\n'))
+            //     }
+            // } else {
+            //     alert('no row selected');
+            // }
         });
 
     });

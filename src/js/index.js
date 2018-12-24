@@ -1,9 +1,12 @@
-import img1 from '../img/3933.jpg';
+
 import 'bootstrap';
 import "./combined"
 import "../scss/lightbox.css"
 import '../scss/index.scss'
-
+import '../img/3933.jpg';
+import '../img/3951.jpg';
+import '../img/3936e.jpg';
+import '../img/3947.jpg';
 
 
 // Following code from Webpack Basics 2 from interntet
