@@ -171,8 +171,19 @@ function handleNavQueryResponse(response) {
     });
 };
 
-function showPhoto(url) {
-    alert(`In showPhoto's url = ${url}`);
+function showPhoto(cellData) {
+    alert(`In showPhoto's url = ${cellData}`);
+    const navTable = document.querySelector('#navTable');
+    const container = document.createElement('div');
+    container.className = 'imageBox';
+    navTable.insertBefore(container, navTable.childNodes[0]);
+    // const image10 = document.createTextNode("Test of Image PopUp");
+    // container.appendChild(image10);
+    const imgImage = document.createElement('img');
+    const url = cellData.match(/\.\.\/img\/[a-b0-9]*\.jpg/);
+    imgImage.setAttribute('src', url[0]);
+    container.appendChild(imgImage);
+
 }
 
 google.charts.setOnLoadCallback(drawNavVisualization);
