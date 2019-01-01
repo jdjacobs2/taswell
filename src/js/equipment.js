@@ -132,7 +132,7 @@ function handleNavQueryResponse(response) {
             let cellValue = data.getValue(selection[selection.length - 1].row, column);
             msg.push('value of clicked cell is: ' + cellValue);
             if (/img src/.test(cellValue)) {
-                alert(msg.join('\n---------\n'));
+                // alert(msg.join('\n---------\n'));
                 showPhoto(cellValue);
             } else {
                 alert('No photo for this selection');
@@ -172,18 +172,28 @@ function handleNavQueryResponse(response) {
 };
 
 function showPhoto(cellData) {
-    alert(`In showPhoto's url = ${cellData}`);
+    // alert(`In showPhoto's url = ${cellData}`);
     const navTable = document.querySelector('#navTable');
     const container = document.createElement('div');
     container.className = 'imageBox';
+    // container.setAttribute('id', 'close')
     navTable.insertBefore(container, navTable.childNodes[0]);
     // const image10 = document.createTextNode("Test of Image PopUp");
     // container.appendChild(image10);
     const imgImage = document.createElement('img');
     const url = cellData.match(/\.\.\/img\/[a-b0-9]*\.jpg/);
     imgImage.setAttribute('src', url[0]);
+    imgImage.setAttribute('id', 'popup');
     container.appendChild(imgImage);
+    container.addEventListener('click', function () { closeContainer(); });
 
+}
+
+function closeContainer() {
+    container = document.querySelector('.imageBox');
+    container.style.display = 'none';
+    imgImage = document.querySelector('#popup');
+    imgImage.style.display = 'none';
 }
 
 google.charts.setOnLoadCallback(drawNavVisualization);
