@@ -13,7 +13,7 @@ export const renderThumbnail = (photo, location) => {
   location.appendChild(li);
 };
 
-export const renderLghtBoxPhoto = (item, location, length) => {
+export const renderLightBoxPhoto = (item, location, length) => {
   let currentItem = parseInt(item[0]);
   // console.log(`currentItem = ${currentItem} and item = *${item[0]}* and length = *${length}* and type = ${typeof item[0]}`)
   let previousItem;
@@ -35,13 +35,13 @@ export const renderLghtBoxPhoto = (item, location, length) => {
       <div class="image">
           <img src="${item[2]}">
               <a href="#${previousItem}" class="prev"></a>
-              <a href="#top" class="close"></a>
+              <a href="#top2" class="close"></a>
               <a href="#${nextItem}" class="next"></a>
       </div>
     </div>
   `;
 
- document.querySelector('location').insertAdjacentHTML('beforeend', markup);
+ location.insertAdjacentHTML('beforeend', markup);
 }; 
 
 

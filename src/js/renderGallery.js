@@ -38,8 +38,12 @@ const renderGallery = data => {
 
   data.forEach((el) => {  // el = {caption, href, title, img}  alt = caption
     renderThumbnail(el, ul);
-    // renderLightBoxPhoto(el, data.length);
   });
+  
+  data.forEach((el) => {  // el = {caption, href, title, img}  alt = caption
+    renderLightBoxPhoto(el, thumbnailList, data.length);
+  });
+  
 };
 
 
