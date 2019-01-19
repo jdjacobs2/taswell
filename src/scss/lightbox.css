@@ -2,7 +2,7 @@
   height: 100px;
 }
 
-.top {
+.top, .top2 {
   width: 100%;
   min-height: 300px;
   padding: 20px 0;
