@@ -6,13 +6,20 @@ import desert from "../img2/daylight-desert-drought-459319.jpg";
 let thumbnailList;
 const load = ()=> {
   thumbnailList = document.querySelector('#thumbnails');
+  safety = document.querySelector('#safety');
 }
+
 window.onload = load;
 
+safety.addEventListener('click', () => {
+  // alert('safety clicked');
+  const safetyPhotos = document.querySelector('#safetyPhotos');
+  renderGallery(data,safetyPhotos);
+});
 
 const pathToImages = path.resolve(__dirname, './img/camels-desert-landscape-53537.jpg');  
 
-// Not yet used
+// Not yet used:
 const images = [
   "http://media.digitalcameraworld.com/files/2012/10/Vertorama_landscape_photography_tips_PHO17.insight02and03.vertorama.jpg",
   "http://media.digitalcameraworld.com/files/2012/11/Black_and_white_landscape_photography_DCM131.shoot_creative.main_image_RGB.jpg",
@@ -30,16 +37,16 @@ const data = [
 
 console.log(`the loaction of renderGallery is = ${__dirname} and path to images is ${pathToImages}`);
 
-const renderGallery = data => {
+const renderGallery = (data, location) => {
   const ul = document.createElement('ul');
   ul.classList = 'galleryList';
-  thumbnailList.appendChild(ul);
+  location.appendChild(ul);
 
 
   data.forEach((el) => {  // el = {caption, href, title, img}  alt = caption
     renderThumbnail(el, ul);
   });
-  
+
   data.forEach((el) => {  // el = {caption, href, title, img}  alt = caption
     renderLightBoxPhoto(el, thumbnailList, data.length);
   });
@@ -47,8 +54,8 @@ const renderGallery = data => {
 };
 
 
-var galleryButton = document.querySelector('#activate');
-galleryButton.addEventListener('click', function () {
-  alert("Button Pushed!");
-  renderGallery(data);
-});
+// var galleryButton = document.querySelector('#activate');
+// galleryButton.addEventListener('click', function () {
+//   alert("Button Pushed!");
+//   renderGallery(data);
+// });
