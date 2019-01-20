@@ -3,19 +3,32 @@ import path from 'path';
 import camels from "../img2/camels-desert-landscape-53537.jpg";
 import desert from "../img2/daylight-desert-drought-459319.jpg";
 
-let thumbnailList;
-const load = ()=> {
+let thumbnailList, accordion, safety;
+
+const load = () => {
   thumbnailList = document.querySelector('#thumbnails');
+  accordion = document.querySelector('#accordionEx');
   safety = document.querySelector('#safety');
+
+
+
+
+  // safety.addEventListener('click', () => {
+  //   // alert('safety clicked');
+  //   const safetyPhotos = document.querySelector('#safetyPhotos')
+  //   renderGallery(data, safetyPhotos);
+  // });
+
+  accordion.addEventListener('click', (e) => {
+    let el = e.target.dataset.action;
+    // alert('clicked child of accordion: ' + JSON.stringify(el));
+    if (el === 'safety') {
+     renderGallery(data, safetyPhotos);
+   }
+  });
 }
 
 window.onload = load;
-
-safety.addEventListener('click', () => {
-  // alert('safety clicked');
-  const safetyPhotos = document.querySelector('#safetyPhotos');
-  renderGallery(data,safetyPhotos);
-});
 
 const pathToImages = path.resolve(__dirname, './img/camels-desert-landscape-53537.jpg');  
 
@@ -48,7 +61,7 @@ const renderGallery = (data, location) => {
   });
 
   data.forEach((el) => {  // el = {caption, href, title, img}  alt = caption
-    renderLightBoxPhoto(el, thumbnailList, data.length);
+    renderLightBoxPhoto(el, location, data.length);
   });
   
 };
