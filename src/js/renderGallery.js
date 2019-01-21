@@ -1,10 +1,10 @@
 import {renderThumbnail, renderLightBoxPhoto} from "./renderItem";
 import path from 'path';
-import camels from "../img2/camels-desert-landscape-53537.jpg";
-import desert from "../img2/daylight-desert-drought-459319.jpg";
-import photo1 from "../img3/P1010027.jpg"
-import photo2 from "../img3/P1010036.jpg"
-import photo3 from "../img3/taswell_49_drawing--Windsong.jpg"
+// import camels from "../img2/camels-desert-landscape-53537.jpg";
+// import desert from "../img2/daylight-desert-drought-459319.jpg";
+// import photo1 from "../img3/P1010027.jpg";
+// import photo2 from "../img3/P1010036.jpg";
+// import photo3 from "../img3/taswell_49_drawing--Windsong.jpg";
 // import { data } from './photos';
 
 const data1 = [
@@ -32,7 +32,7 @@ for (let x = 0; x < data1.length; x++) {
         const module = await import(`../img3/${data1[x].SourceFile}`);
         alert(module.default);
         const img = module.default
-        const temp = [img, data1.Title];
+        const temp = [img, data1[x].Title];
         data.push(temp);
       }
     )();

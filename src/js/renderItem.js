@@ -8,7 +8,7 @@ export const renderThumbnail = (photo, index, location) => {
   const li = document.createElement('li');
   li.classList = 'galleryItem';
   const markup = `
-      <a class="caption" href="#${index}" data-title="${photo[1]}-title" data-description="${photo[1]}-desc">
+      <a class="caption" href="#${index}" data-title="${photo[1]}" data-description="${photo[1]}-desc">
         <img src="${photo[0]}" alt='${photo[1]}'>
       </a>
   `; 
