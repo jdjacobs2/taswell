@@ -1,0 +1,152 @@
+I am trying to conditionally import images into renderGallery.js from a file containing an array of objects, each object having properties of the photo's file name, that photo's title, and that photo's caption.  Although that file is successfully imported into renderGallery.js, the dynamic import of the filtered image returns an error that file cannot be found.  However, if that imported file data is embed, rather than imported, into renderGallery.js, the code works.  What am I doing wrong?
+
+Here is the code that does not work:
+
+    // renderGallery.js 
+
+    import path from 'path';
+    import { data } from './data';  //data.js contains the array of 
+         objects
+
+     console.log(data);  // successfully shows data file
+
+    // search for photos having caption "safety" and import photo
+    // returns error that file cannot be found
+    let data = [];  
+    for (let x = 0; x < data1.length; x++) {
+      let photoData = `../img3/${data1[x].SourceFile}`;
+      if (data1[x].Description === 'safety') {
+        (
+          async () => {
+            const module = await import(photoData);
+            alert(module.default);
+            const img = module.default
+            const temp = [img, data1[x].Title];
+            data.push(temp);
+          }
+        )();
+      };
+    };
+
+    let accordion, safety;
+
+    // obtain html location to add photos
+    const load = () => {
+      accordion = document.querySelector('#accordionEx');
+      safety = document.querySelector('#safety');
+      
+      // listen for click to display photos
+      accordion.addEventListener('click', (e) => {
+        let el = e.target.dataset.action;
+        if (el === 'safety') {
+          renderGallery(data, safetyPhotos);
+        }
+      });
+    }
+
+    windows.load = load;
+
+    const renderGallery = (data, location) => {
+      const ul = document.createElement('ul');
+      ul.classList = 'galleryList';
+      location.appendChild(ul);
+
+      data.forEach((el, index) => {
+        renderThumbnail(el, index + 1, ul);
+      });
+    });
+
+    // renders the photo to html -- never run because of above error
+    const renderThumbnail = (photo, index, location) => {
+      const li = document.createElement('li');
+      li.classList = 'galleryItem';
+      const markup = `
+          <a class="caption" href="#${index}" data-title="${photo[1]}" 
+               data-description="${photo[1]}-desc">
+            <img src="${photo[0]}" alt='${photo[1]}'>
+          </a>
+      `; 
+      li.innerHTML = markup;
+      location.appendChild(li);
+    };
+
+And here is the code that works:
+
+    //renderGallery.js
+
+    const data = [
+    {
+      "SourceFile": "P1010027.jpg",
+      "Title": "Windsong Sailing from Front Quarter",
+      "Description": "safety"
+    },
+    {
+      "SourceFile": "P1010036.jpg",
+      "Title": "Windsong Sailing from AFT",
+      "Description": "hull"
+    },
+    {
+      "SourceFile": "taswell_49_drawing--Windsong.jpg",
+      "Title": "Windsong Plans",
+      "Description": "safety"
+    }];
+ 
+
+    let data = [];  
+    for (let x = 0; x < data1.length; x++) {
+      let photoData = `../img3/${data1[x].SourceFile}`;
+      if (data1[x].Description === 'safety') {
+        (
+          async () => {
+            const module = await import(photoData);
+            alert(module.default);
+            const img = module.default
+            const temp = [img, data1[x].Title];
+            data.push(temp);
+          }
+        )();
+      };
+    }
+
+
+    let accordion, safety;
+
+    const load = () => {
+      accordion = document.querySelector('#accordionEx');
+       safety = document.querySelector('#safety');
+
+  accordion.addEventListener('click', (e) => {
+    let el = e.target.dataset.action;
+    // alert('clicked child of accordion: ' + JSON.stringify(el));
+    if (el === 'safety') {
+     renderGallery(data, safetyPhotos);
+   }
+  });
+}
+
+    window.onload = load;
+
+    const pathToImages = path.resolve(__dirname, './img/camels-desert- 
+   landscape-53537.jpg');  
+
+const renderGallery = (data, location) => {
+  const ul = document.createElement('ul');
+  ul.classList = 'galleryList';
+  location.appendChild(ul);
+
+  data.forEach((el, index) => {   
+    renderThumbnail(el, index + 1, ul);
+  });
+};
+
+    const renderThumbnail = (photo, index, location) => {
+      const li = document.createElement('li');
+      li.classList = 'galleryItem';
+      const markup = `
+          <a class="caption" href="#${index}" data-title="${photo[1]}" data-description="${photo[1]}-desc">
+          <img src="${photo[0]}" alt='${photo[1]}'>
+          </a>
+      `; 
+     li.innerHTML = markup;
+     location.appendChild(li);
+     };

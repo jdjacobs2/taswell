@@ -5,41 +5,45 @@ import path from 'path';
 // import photo1 from "../img3/P1010027.jpg";
 // import photo2 from "../img3/P1010036.jpg";
 // import photo3 from "../img3/taswell_49_drawing--Windsong.jpg";
-// import { data } from './photos';
+// import { tes, data } from './datas';
 
-const data1 = [
-{
-  "SourceFile": "P1010027.jpg",
-  "Title": "Windsong Sailing from Front Quarter",
-  "Description": "hull"
-},
-{
-  "SourceFile": "P1010036.jpg",
-  "Title": "Windsong Sailing from AFT",
-  "Description": "hull"
-},
-{
-  "SourceFile": "taswell_49_drawing--Windsong.jpg",
-  "Title": "Windsong Plans",
-  "Description": "hull"
-  }];
 
-let data = [];  
-for (let x = 0; x < data1.length; x++) {
-  if (data1[x].Description === 'hull') {
+// console.log(`this is tes: ${tes}`);
+// console.log(JSON.stringify(data));
+const data = [
+  {
+    "SourceFile": "IMG_2146.jpg",
+    "Title": "Windsong at Anchor",
+    "Description": "hull"
+  },
+  {
+    "SourceFile": "IMG_3752.jpg",
+    "Title": "Navigation Station",
+    "Description": "nav"
+  },
+  {
+    "SourceFile": "IMG_3758.jpg",
+    "Title": "Windsong Advdenturas View",
+    "Description": "hull"
+  }
+];
+
+let imageData = [];  
+for (let x = 0; x < data.length; x++) {
+  if (data[x].Description === 'hull') {
     (
       async () => {
-        const module = await import(`../img3/${data1[x].SourceFile}`);
+        const module = await import('../img3/IMG_3758.jpg');
         alert(module.default);
-        const img = module.default
-        const temp = [img, data1[x].Title];
-        data.push(temp);
+        const img = module.default;
+        const temp = [img, data[x].Title];
+        imageData.push(temp);
       }
     )();
   };
-  }
+};
 
-// alert(data1);
+// alert(data);
 
 let thumbnailList, accordion, safety;
 
@@ -59,7 +63,7 @@ const load = () => {
     let el = e.target.dataset.action;
     // alert('clicked child of accordion: ' + JSON.stringify(el));
     if (el === 'safety') {
-     renderGallery(data, safetyPhotos);
+      renderGallery(imageData, safetyPhotos);
    }
   });
 }
@@ -84,19 +88,19 @@ const pathToImages = path.resolve(__dirname, './img/camels-desert-landscape-5353
 //   [desert, "colored desert2"]
 // ];
 
-console.log(`the loaction of renderGallery is = ${__dirname} and path to images is ${pathToImages}`);
+console.log(`the location of renderGallery is = ${__dirname} and path to images is ${pathToImages}`);
 
-const renderGallery = (data, location) => {
+const renderGallery = (imageData, location) => {
   const ul = document.createElement('ul');
   ul.classList = 'galleryList';
   location.appendChild(ul);
 
 
-  data.forEach((el, index) => {  // el = {img, title, } 
+  imageData.forEach((el, index) => {  // el = {img, title, } 
     renderThumbnail(el, index + 1, ul);
   });
 
-  data.forEach((el, index) => {  // el = {img, title, }  a
+  imageData.forEach((el, index) => {  // el = {img, title, }  a
     renderLightBoxPhoto(el, index + 1, location, data.length);
   });
   

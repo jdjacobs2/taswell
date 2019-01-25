@@ -1,11 +1,6 @@
-// let tes = 7;
-// export default tes ;
-
-function makeData() {
-
-} 
-
-const data = [{
+export const tes = 7;
+ 
+export const data1 = [{
   "SourceFile": "IMG_20180105_125501.jpg",
   "Title": "Windsong View Aft Sailing",
   "Description": "hull"
@@ -41,5 +36,3 @@ const data = [{
   "Description": "sails"
 }
 ];
-
-module.exports = photos;
