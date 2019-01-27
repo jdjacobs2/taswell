@@ -1,7 +1,6 @@
 
 import 'bootstrap';
 import "./equipment";
-// import "../scss/lightbox.css";
 import './renderGallery.js'
 import './renderItem.js'
 import '../scss/index.scss';
