@@ -47,7 +47,7 @@
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-.caption::after {
+/* .caption::after {
   content: attr(data-description);
   width: 250px;
   height: 0;
@@ -63,16 +63,16 @@
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease; } */
 
 .caption:hover::before {
   opacity: 1;
   height: 25px; }
 
-.caption:hover::after {
+/* .caption:hover::after {
   opacity: 1;
   bottom: 0;
-  height: 65px; }
+  height: 65px; } */
 
 /* lightbox */
 
