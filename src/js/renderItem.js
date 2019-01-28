@@ -1,19 +1,19 @@
 // photo = {title, img}  alt attribute of src element = title
 import thumbnailList from './renderGallery'; // <sector class='top2'
 
-export const renderThumbnail = (photo, index, location) => {
+export const renderThumbnail = (photo, index, location) => {  // photos=[image, description, category]
   const li = document.createElement('li');
   li.classList = 'galleryItem';
   const markup = `
-      <a class="caption" href="#${index}" data-title="${photo[0]}-title" data-description="${photo[0]}-desc">
-        <img src="${photo[1]}" alt='${photo[0]}'>
+      <a class="caption" href="#${index}" data-title="${photo[1]}" data-description="${photo[1]}-desc">
+        <img src="${photo[0]}" alt='${photo[1]}'>
       </a>
   `; 
   li.innerHTML = markup;
   location.appendChild(li);
 };
 
-export const renderLightBoxPhoto = (item, index, location, length) => {
+export const renderLightBoxPhoto = (item, index, location, length) => {  // item = [image, description, category]
   let currentItem = index;
   index = index.toString();
   // console.log(`currentItem = ${currentItem} and item = *${item[0]}* and length = *${length}* and type = ${typeof item[0]}`)
@@ -36,7 +36,7 @@ export const renderLightBoxPhoto = (item, index, location, length) => {
   div.classList = 'lightbox'
   const markup = `
     <div class="image">
-        <img src="${item[1]}">
+        <img src="${item[0]}">
             <a href="#${previousItem}" class="prev"></a>
             <a href="#top2" class="close"></a>
             <a href="#${nextItem}" class="next"></a>
