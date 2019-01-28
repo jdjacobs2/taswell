@@ -1,5 +1,4 @@
-import codeURL from "../img/code.png"
-
+dcvcxcvrfcxcv
 const img = document.createElement("img")
 img.src = codeURL
 img.style = "background: #2B3A42; padding: 20px"
