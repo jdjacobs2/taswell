@@ -2,6 +2,11 @@
 
 import csv
 import os.path
+import os
+
+# subprocess.run('exiftool', '-a')
+os.system('exiftool -s -csv -SourceFile -Title -Description /media/jim/DOS/Windsong-Sale/* > photos.csv')
+
 with open('photos.csv') as csvfile, open('import.txt', 'w') as importfile, open('array.txt', 'w') as arrayfile:
   arrayfile.write("const data = [\n")
   infoReader = csv.DictReader(csvfile)
@@ -16,5 +21,3 @@ with open('photos.csv') as csvfile, open('import.txt', 'w') as importfile, open(
   offset = arrayfile.tell()
   arrayfile.seek(offset - 2, 0)
   arrayfile.write("\n]")
-
-    # print(row['SourceFile'], row['Title'], row['Description'])
