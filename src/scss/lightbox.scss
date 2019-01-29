@@ -88,7 +88,7 @@ $image-size:150px;
   text-align: center;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.95);
 }
 
 .lightbox a { 
@@ -97,8 +97,8 @@ $image-size:150px;
 }
 
 .lightbox img {
-  max-height: 85%;
-  max-width: 85%;
+  max-height: 85vh;
+  max-width: 85vw;
 }
 
 .lightbox:target {
