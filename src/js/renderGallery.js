@@ -43,6 +43,12 @@ import P1010023 from '../img3/P1010023.jpg';
 import P1010027 from '../img3/P1010027.jpg';
 import P1010036 from '../img3/P1010036.jpg';
 
+import '../img/IMG_3933.jpg';
+import '../img/IMG_3951.jpg';
+import '../img/IMG_3936e.jpg';
+import '../img/IMG_3947.jpg';
+import '../img/tin-can-phone.jpg'
+
 let thumbnailList, accordion, photoPhotos;
 
 const load = () => {
