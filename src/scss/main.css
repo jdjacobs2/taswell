@@ -1,7 +1,8 @@
+/* TODO: p1010027.jpg appears also in renderGallery.js--remove duplicate */
 #hero {
     height: 90vh;
     background-size: contain;
-    background-image: url('../img/P1010027.jpg');
+    background-image: url('../img3/P1010027.jpg');
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -17,9 +18,9 @@
 
 #text-box h1 {
     display: block;
-    font-size: 70px;
+    font-size: 12vw;
     font-weight: 400;
-    letter-spacing: 30px;
+    letter-spacing: 1vw;
     text-align: center;
 
     animation-name: moveInLeft;
@@ -29,9 +30,9 @@
  
 #text-box h2 {
     display:block;
-    /* font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 10px; */
+    font-size: 2vw;
+    /* font-weight: 700; */
+    /* letter-spacing: .4rem;  */
     text-align: center;
     animation: moveInRight 1s ease-out;
 }

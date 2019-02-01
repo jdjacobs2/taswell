@@ -112,17 +112,22 @@ const data = [
   [P1010036, 'Windsong Sailing from Aft', 'hull'],
 ]
 
+let clicked = false;  // only once renderGallery
 const renderGallery = (data, location) => {
-  const ul = document.createElement('ul');
-  ul.classList = 'galleryList';
-  location.appendChild(ul);
+  if (!clicked) {
+    clicked = true;  
+    const ul = document.createElement('ul');
+    ul.classList = 'galleryList';
+    location.appendChild(ul);
 
-  data.forEach((el, index) => {  // el = {image, description, category} 
-    renderThumbnail(el, index + 1, ul);
-  });
+    data.forEach((el, index) => {  // el = {image, description, category} 
+      renderThumbnail(el, index + 1, ul);
+    });
 
-  data.forEach((el, index) => {  //  el = {image, description, category}
-    renderLightBoxPhoto(el, index + 1, location, data.length);
-  });
+    data.forEach((el, index) => {  //  el = {image, description, category}
+      renderLightBoxPhoto(el, index + 1, location, data.length);
+    });
+  };
+ 
   
 };
