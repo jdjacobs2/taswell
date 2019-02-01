@@ -1,0 +1,158 @@
+.gallery-size {
+  height: 200px;
+}
+
+.top, .top2 {
+  width: 100%;
+  min-height: 300px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.galleryItem {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border: solid 0px #fff;
+  padding: 0;
+  display: inline-block;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+}
+
+.caption {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
+}
+
+.caption::before {
+  content: attr(data-title);
+  width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.3);
+  font: bold 1em 'helvetica neue', helvetica, arial, sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* .caption::after {
+  content: attr(data-description);
+  width: 250px;
+  height: 0;
+  position: absolute;
+  bottom: -0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(34,34,34,0.5);
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; } */
+.caption:hover::before {
+  opacity: 1;
+  height: 100%;
+}
+
+/* .caption:hover::after {
+  opacity: 1;
+  bottom: 0;
+  height: 65px; } */
+/* lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.lightbox img {
+  max-height: 85vh;
+  max-width: 85vw;
+}
+
+.lightbox:target {
+  display: table;
+}
+
+.lightbox .image {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.lightbox .image img {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.next, .prev, .close {
+  display: block;
+  position: fixed;
+}
+
+.close {
+  width: 5000px;
+  height: 5000px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  cursor: default;
+}
+
+.next, .prev {
+  width: 100px;
+  height: 25px;
+  top: 50%;
+  z-index: 10;
+  opacity: 0.7;
+  font-size: 2em;
+  line-height: 25px;
+  text-shadow: 0px 0px 15px black;
+}
+
+.prev {
+  left: 10px;
+  text-align: left;
+}
+
+.prev::after {
+  content: '\2039';
+}
+
+.next {
+  right: 10px;
+  text-align: right;
+}
+
+.next::before {
+  content: '\203A';
+}
+/*# sourceMappingURL=lightbox.css.map */
