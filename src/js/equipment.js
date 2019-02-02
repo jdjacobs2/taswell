@@ -75,27 +75,27 @@ google.charts.setOnLoadCallback(drawMechVisualization);
 // Hull
 
 
-function drawHullVisualization() {
-    var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
+// function drawHullVisualization() {
+//     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
 
-    //    query.setQuery('SELECT A, B, C, D, E, F, G label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
-    query.setQuery('SELECT A, B, D where C = "Hull"');
+//     //    query.setQuery('SELECT A, B, C, D, E, F, G label A "Equipment", B "Number", C "Approx. Cost", D "Category", E "Installer", F "Install Date", G "Comment"');
+//     query.setQuery('SELECT A, B, D where C = "Hull"');
 
-    query.send(handleHullQueryResponse);
-}
+//     query.send(handleHullQueryResponse);
+// }
 
-function handleHullQueryResponse(response) {
-    if (response.isError()) {
-        alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-        return;
-    }
-    var data = response.getDataTable();
-    var visualization = new google.visualization.Table(document.getElementById('hullTable'));
-    visualization.draw(data, {
-        legend: 'bottom'
-    });
-}
-google.charts.setOnLoadCallback(drawHullVisualization);
+// function handleHullQueryResponse(response) {
+//     if (response.isError()) {
+//         alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+//         return;
+//     }
+//     var data = response.getDataTable();
+//     var visualization = new google.visualization.Table(document.getElementById('hullTable'));
+//     visualization.draw(data, {
+//         legend: 'bottom'
+//     });
+// }
+// google.charts.setOnLoadCallback(drawHullVisualization);
 
 
 
