@@ -38,7 +38,7 @@ with open('photos.csv') as csvfile, open('import.txt', 'w') as importfile, open(
     str_array = ''.join([str(x) for x in temp_array])
 
     str_array = str_array.replace(']', '],\n')
-    str_array = str_array.rstrip(',\n') + '\n;]'
+    str_array = str_array.rstrip(',\n') + '\n];'
     str_array = reObj.sub(r'[\2', str_array)
     # print((str_array))
     arrayfile.write(str_array)
