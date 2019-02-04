@@ -35,12 +35,13 @@ export const renderLightBoxPhoto = (item, index, location, length) => {  // item
   div.id = `${index}`;
   div.classList = 'lightbox'
   const markup = `
-    <div class="image">
+    <figure class="image">
         <img src="${item[0]}">
-            <a href="#${previousItem}" class="prev"></a>
-            <a href="#top2" class="close"></a>
-            <a href="#${nextItem}" class="next"></a>
-    </div>
+        <figcaption class="figColor">"${item[1]}"</figcaption>
+        <a href="#${previousItem}" class="prev"></a>
+        <a href="#top2" class="close"></a>
+        <a href="#${nextItem}" class="next"></a>
+    </figure>
   `;
   div.innerHTML = markup;
   location.appendChild(div);
