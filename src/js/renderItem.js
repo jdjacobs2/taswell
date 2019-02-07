@@ -34,10 +34,11 @@ export const renderLightBoxPhoto = (item, index, location, length) => {  // item
   const div = document.createElement('div');
   div.id = `${index}`;
   div.classList = 'lightbox'
+  item[1] = item[1].replace(/"/, '')
   const markup = `
     <figure class="image">
         <img src="${item[0]}">
-        <figcaption class="figColor">"${item[1]}"</figcaption>
+        <figcaption class="figColor">${item[1]}</figcaption>
         <a href="#${previousItem}" class="prev"></a>
         <a href="#top2" class="close"></a>
         <a href="#${nextItem}" class="next"></a>
