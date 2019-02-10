@@ -6,8 +6,8 @@ import '../img/IMG_3936e.jpg';
 import '../img/IMG_3947.jpg';
 import '../img/tin-can-phone.jpg'
 
-
-
+// begin insert import
+import Chip_sunset_2 from '../img3/Chip_sunset_2.jpg';
 import IMG_20180105_125501 from '../img3/IMG_20180105_125501.jpg';
 import IMG_3746 from '../img3/IMG_3746.jpg';
 import IMG_3755 from '../img3/IMG_3755.jpg';
@@ -61,12 +61,18 @@ import IMG_4383_HDR_Edit from '../img3/IMG_4383_HDR_Edit.jpg';
 import IMG_4401_HDR from '../img3/IMG_4401_HDR.jpg';
 import IMG_4428_HDR from '../img3/IMG_4428_HDR.jpg';
 import IMG_4440 from '../img3/IMG_4440.jpg';
+import IMG_4452 from '../img3/IMG_4452.jpg';
+import IMG_4456 from '../img3/IMG_4456.jpg';
+import IMG_4476_Edit from '../img3/IMG_4476_Edit.jpg';
+import IMG_4481_HDR_Edit from '../img3/IMG_4481_HDR_Edit.jpg';
+import IMG_4504_HDR_Edit from '../img3/IMG_4504_HDR_Edit.jpg';
+import IMG_4512_Edit from '../img3/IMG_4512_Edit.jpg';
 import P1010027 from '../img3/P1010027.jpg';
-import P1010036 from '../img3/P1010036.jpg';
 import taswell_49_drawing__Windsong from '../img3/taswell_49_drawing__Windsong.jpg';
 
 
 const data = [
+[Chip_sunset_2, 'Windsong at Anchor (Rio Dulce)', 'full hull'],
 [IMG_20180105_125501, 'Windsong View Aft Sailing', 'full hull'],
 [IMG_3755, 'Windsong Transom View', 'full hull'],
 [IMG_3758, 'Windsong Aft View', 'full hull'],
@@ -77,7 +83,6 @@ const data = [
 [IMG_4101, 'Windsong Hull Starboard Front View', 'full hull'],
 [IMG_4153, 'Cockpit with Cushions', 'full hull'],
 [P1010027, 'Windsong Sailing from Front Quarter', 'full hull'],
-[P1010036, 'Windsong Sailing from Aft', 'full hull'],
 [taswell_49_drawing__Windsong, 'Windsong Plans', 'full hull'],
 [IMG_3840, 'Windsong on Hard', 'hull'],
 [IMG_4044_Edit, 'Ta Shing Brass Threshold Plate', 'hull'],
@@ -91,6 +96,8 @@ const data = [
 [IMG_4154, 'Foredeck from behind Cockpit', 'hull'],
 [IMG_4374, 'Guest Cabin  ', 'guest cabin'],
 [IMG_4383_HDR_Edit, 'Guest Cabin Vanity', 'guest cabin'],
+[IMG_4452, 'Crew Cabin', 'crew cabin'],
+[IMG_4456, 'Crew Cabin', 'crew cabin'],
 [IMG_4361_HDR, 'Guest Head', 'guest head'],
 [IMG_4371_HDR, 'Guest Head', 'guest head'],
 [IMG_3921, 'Salon Liquor Cabinet', 'salon'],
@@ -99,13 +106,17 @@ const data = [
 [IMG_4307_HDR_Edit, 'Assembling Salon Large Table', 'salon'],
 [IMG_4440, "Salon's Large Table", 'salon'],
 [IMG_3782_Edit, 'Galley Starboard', 'galley'],
-[IMG_4149, 'BBQ & Fiberglass Propane Tank', 'galley'],
-[IMG_4277_HDR, 'Galley & Companionway Stairs', 'galley'],
+[IMG_4149, 'BBQ and Fiberglass Propane Tank', 'galley'],
+[IMG_4277_HDR, 'Galley and Companionway Stairs', 'galley'],
 [IMG_3947_Edit, 'Garmin Autopilot Class B Compact Drive Unit', 'nav'],
 [IMG_4213_2, 'AIS and Sat Phone Antennas', 'nav'],
 [IMG_4237_HDR, 'Navigation Station', 'nav'],
 [IMG_4428_HDR, 'Navigation Station', 'nav'],
-[IMG_3746, 'Port Aft Master Cabin Closet', 'master'],
+[IMG_3746, 'Port Aft Master Cabin Closet', 'master cabin'],
+[IMG_4476_Edit, 'Master Cabin', 'master cabin'],
+[IMG_4481_HDR_Edit, 'Master Cabin', 'master cabin'],
+[IMG_4504_HDR_Edit, 'Master Cabin', 'master cabin'],
+[IMG_4512_Edit, 'Master Cabin', 'master cabin'],
 [IMG_4401_HDR, 'Master Head', 'master head'],
 [IMG_3773, 'Andersen  42 ST variable speed electric winches ', 'sails'],
 [IMG_4054, 'Rigid Boom Vang', 'sails'],
@@ -124,9 +135,7 @@ const data = [
 [IMG_4208_Edit, 'Life Raft', 'safety'],
 [IMG_4209, 'Man Over Board Module', 'safety']
 ];
-
-
-
+// end insert import
 
 let thumbnailList, accordion, photoPhotos;
 
