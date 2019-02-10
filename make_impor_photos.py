@@ -22,7 +22,7 @@ classifications = ('full hull', 'hull', 'guest', 'guest cabin', 'crew cabin',
 
 classifications_numbered = dict( zip(classifications,range(0, len(classifications))))
 
-print("running make_impor_photos.py")
+# print("running make_impor_photos.py")
 
 
 with open('photos.csv') as csvfile, open('import.txt', 'w') as importfile:

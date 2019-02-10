@@ -137,6 +137,7 @@ const data = [
 ];
 // end insert import
 
+
 let thumbnailList, accordion, photoPhotos;
 
 const load = () => {
@@ -153,9 +154,6 @@ const load = () => {
 }
 
 window.onload = load;
-
-
-
 
 let clicked = false;  // only once renderGallery
 const renderGallery = (data, location) => {
