@@ -68,6 +68,7 @@ import IMG_4481_HDR_Edit from '../img3/IMG_4481_HDR_Edit.jpg';
 import IMG_4504_HDR_Edit from '../img3/IMG_4504_HDR_Edit.jpg';
 import IMG_4512_Edit from '../img3/IMG_4512_Edit.jpg';
 import P1010027 from '../img3/P1010027.jpg';
+import P1010036 from '../img3/P1010036.jpg';
 import taswell_49_drawing__Windsong from '../img3/taswell_49_drawing__Windsong.jpg';
 
 
@@ -83,6 +84,7 @@ const data = [
 [IMG_4101, 'Windsong Hull Starboard Front View', 'full hull'],
 [IMG_4153, 'Cockpit with Cushions', 'full hull'],
 [P1010027, 'Windsong Sailing from Front Quarter', 'full hull'],
+[P1010036, 'Windsong Sailing from Aft', 'full hull'],
 [taswell_49_drawing__Windsong, 'Windsong Plans', 'full hull'],
 [IMG_3840, 'Windsong on Hard', 'hull'],
 [IMG_4044_Edit, 'Ta Shing Brass Threshold Plate', 'hull'],
@@ -136,6 +138,10 @@ const data = [
 [IMG_4209, 'Man Over Board Module', 'safety']
 ];
 // end insert import
+
+
+
+
 
 
 let thumbnailList, accordion, photoPhotos;

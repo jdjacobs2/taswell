@@ -10,7 +10,12 @@
  * 
  */
 
+import '../scss/equipment.scss';
 
+const cssClassNames = {
+  headerRow: 'headerRow',
+  tableRow: 'tableRow'
+};
 
 google.charts.load('current', {
     packages: ['table']
@@ -35,11 +40,11 @@ function handleElecQueryResponse(response) {
         alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
         return;
     }
+
     var data = response.getDataTable();
     var visualization = new google.visualization.Table(document.getElementById('elecTable'));
-    visualization.draw(data, {
-        legend: 'bottom'
-    });
+    console.log(cssClassNames);
+    visualization.draw(data, {cssClassNames});
 }
 
 google.charts.setOnLoadCallback(drawElec);
@@ -65,7 +70,7 @@ function handleMechQueryResponse(response) {
     }
     var data = response.getDataTable();
     var visualization = new google.visualization.Table(document.getElementById('mechTable'));
-    visualization.draw(data);
+    visualization.draw(data, {cssClassNames});
 }
 google.charts.setOnLoadCallback(drawMechVisualization);
 
@@ -107,36 +112,40 @@ function drawNavVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1npbW_l2Nbmp79LxiBTgRt82ZVtSriidaunUK5asFJpo&output=html&usp=sharing');
 
     //    query.setQuery('SELECT A, B, C, D, E, F label A "Equipment", B "Number", C "Category", D "Install Date", E "Id", F "Photo"');
-    query.setQuery('SELECT A, B, D, F  where C = "Nav"');
+    // query.setQuery('SELECT A, B, D, F  where C = "Nav"');
+    query.setQuery('SELECT A, B, D  where C = "Nav"');
 
     query.send(handleNavQueryResponse);
 }
 
 function handleNavQueryResponse(response) {
-    if (response.isError()) {
-        alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-        return;
-    }
-    var data = response.getDataTable();
-    const visualization = new google.visualization.Table(document.getElementById('navTable'));
+  if (response.isError()) {
+    alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+  var data = response.getDataTable();
+  const visualization = new google.visualization.Table(document.getElementById('navTable'));
+  // added below to replace all comment out below
+  visualization.draw(data, { cssClassNames });
+}
 
     // google.visualization.events.addListener(visualization, 'select', selectHandler);
 
-    google.visualization.events.addListener(visualization, 'ready', function () {
-        document.querySelector('#navTable tbody').addEventListener('click', function (e) {
-            var cell = e.srcElement || e.target, column = null;
-            let selection = visualization.getSelection();
-            column = 3;
-            let msg = ['column-index is ' + column];
-            msg.push('row-index is ' + selection[selection.length - 1].row);
-            let cellValue = data.getValue(selection[selection.length - 1].row, column);
-            msg.push('value of clicked cell is: ' + cellValue);
-            if (/img src/.test(cellValue)) {
-                // alert(msg.join('\n---------\n'));
-                showPhoto(cellValue);
-            } else {
-                alert('No photo for this selection');
-            }
+    // google.visualization.events.addListener(visualization, 'ready', function () {
+    //     document.querySelector('#navTable tbody').addEventListener('click', function (e) {
+    //         var cell = e.srcElement || e.target, column = null;
+    //         let selection = visualization.getSelection();
+    //         column = 3;
+    //         let msg = ['column-index is ' + column];
+    //         msg.push('row-index is ' + selection[selection.length - 1].row);
+    //         let cellValue = data.getValue(selection[selection.length - 1].row, column);
+    //         msg.push('value of clicked cell is: ' + cellValue);
+    //         if (/img src/.test(cellValue)) {
+    //             // alert(msg.join('\n---------\n'));
+    //             showPhoto(cellValue);
+    //         } else {
+    //             alert('No photo for this selection');
+    //         }
 
             // if (selection.length && cell !== cell.parentNode.firstChild) {
             //     for (var i = 0; i < cell.parentNode.childNodes.length; ++i) {
@@ -162,39 +171,39 @@ function handleNavQueryResponse(response) {
             // } else {
             //     alert('no row selected');
             // }
-        });
+//         });
 
-    });
-    visualization.draw(data, {
-        allowHtml: true
-        // showRowNumber: true
-    });
-};
+//     });
+//     visualization.draw(data, {
+//         allowHtml: true
+//         // showRowNumber: true
+//     });
+// };
 
-function showPhoto(cellData) {
-    // alert(`In showPhoto's url = ${cellData}`);
-    const navTable = document.querySelector('#navTable');
-    const container = document.createElement('div');
-    container.className = 'imageBox';
-    // container.setAttribute('id', 'close')
-    navTable.insertBefore(container, navTable.childNodes[0]);
-    // const image10 = document.createTextNode("Test of Image PopUp");
-    // container.appendChild(image10);
-    const imgImage = document.createElement('img');
-    const url = cellData.match(/\.\.\/img\/[a-b0-9]*\.jpg/);
-    imgImage.setAttribute('src', url[0]);
-    imgImage.setAttribute('id', 'popup');
-    container.appendChild(imgImage);
-    container.addEventListener('click', function () { closeContainer(); });
+// function showPhoto(cellData) {
+//     // alert(`In showPhoto's url = ${cellData}`);
+//     const navTable = document.querySelector('#navTable');
+//     const container = document.createElement('div');
+//     container.className = 'imageBox';
+//     // container.setAttribute('id', 'close')
+//     navTable.insertBefore(container, navTable.childNodes[0]);
+//     // const image10 = document.createTextNode("Test of Image PopUp");
+//     // container.appendChild(image10);
+//     const imgImage = document.createElement('img');
+//     const url = cellData.match(/\.\.\/img\/[a-b0-9]*\.jpg/);
+//     imgImage.setAttribute('src', url[0]);
+//     imgImage.setAttribute('id', 'popup');
+//     container.appendChild(imgImage);
+//     container.addEventListener('click', function () { closeContainer(); });
 
-}
+// }
 
-function closeContainer() {
-    container = document.querySelector('.imageBox');
-    container.style.display = 'none';
-    imgImage = document.querySelector('#popup');
-    imgImage.style.display = 'none';
-}
+// function closeContainer() {
+//     container = document.querySelector('.imageBox');
+//     container.style.display = 'none';
+//     imgImage = document.querySelector('#popup');
+//     imgImage.style.display = 'none';
+// }
 
 google.charts.setOnLoadCallback(drawNavVisualization);
 
@@ -219,9 +228,7 @@ function handleSafetyQueryResponse(response) {
     }
     var data = response.getDataTable();
     var visualization = new google.visualization.Table(document.getElementById('safetyTable'));
-    visualization.draw(data, {
-        legend: 'bottom'
-    });
+    visualization.draw(data, {cssClassNames});
 }
 google.charts.setOnLoadCallback(drawSafetyVisualization);
 
@@ -248,8 +255,6 @@ function handleSailsQueryResponse(response) {
     }
     var data = response.getDataTable();
     var visualization = new google.visualization.Table(document.getElementById('sailsTable'));
-    visualization.draw(data, {
-        legend: 'bottom'
-    });
+    visualization.draw(data, {cssClassNames});
 }
 google.charts.setOnLoadCallback(drawSailsVisualization);

@@ -16,3 +16,5 @@ def remove_dash():
         shutil.rmtree('/home/jim/webprojects/Taswell/src/img3', ignore_errors=True)
         shutil.copytree('/media/jim/DOS/Windsong-Sale', '/home/jim/webprojects/Taswell/src/img3')
 
+if __name__ == "__main__":
+    remove_dash()
