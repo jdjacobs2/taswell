@@ -144,6 +144,14 @@ const data = [
 
 
 
+
+
+
+
+
+
+
+
 let thumbnailList, accordion, photoPhotos;
 
 const load = () => {

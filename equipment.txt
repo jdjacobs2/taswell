@@ -1,4 +1,5 @@
-1 Bitstorm Badboy XTreme --Installed: 2015
+-- Comm --
+1 Bitstorm Badboy XTreme Long Distance WIFI Transceiver --Installed: 2015
 1 Digital Antenna Cell Phone Extender --Installed: 2009
 1 DR-7800 Pactor modem w/bluetooth --Installed: 2015
 1 Dynaplate bronze hull grounding plate (18" x 6") --Installed: 2010
@@ -11,6 +12,13 @@
 1 Standard Horizon 850 handheld VHF with GPS --Installed: 2012
 1 Telephone inlet on transom --Installed: 1989
 4 Two stereo speakers in saloon and two in cockpit --Installed: 2003
+-- Crew Cabin --
+1 Cedar lined hanging lockers with automatic lights (Crew Cabin)
+2 Large bunk beds with lee cloths (Crew Cabin)
+4 Cedar lined draws (Crew Cabin)
+1 Mirror with vanity table & storage (Crew Cabin)
+2 Brass reading lights
+-- Elec --
 2 200 watts solar panels --Installed: 2010
 1 8 kW MDKD Onan Generator ???? hrs --Installed: 1989
 1 Bass digital Yachmaster AC/DC Master Control Panel --Installed: 1989
@@ -24,8 +32,25 @@
 1 Magnum ME-SBC Smart Battery Charge Combiner --Installed: 2015
 1 Magnum pure sine wave 2800 watt inverter/charger --Installed: 2015
 1 Newmar Galvanic Isolator GI-50 --Installed: 2009
- Galley 
-1 Galleymate 1500 BBQ (propane) --Installed: 2010
+-- Galley --
+1 Independent Frigoboat DC keel cooled freezer with digital controls --Installed: 2010
+1 Independent Frigoboat DC keel cooled refrigerator with digital controls --Installed: 2010
+1 Nicro solar galley ventilator --Installed: 2018
+1 Princess 3 burner electric range
+1 Double deep stainless steel sink
+1 Salt water foot pump --Installed: 2016
+1 Fresh water foot pump --Installed: 2016
+2 Counter-top sink covers
+1 Extensive galley storage
+1 Microwave oven --Installed: 2015
+-- Guest Cabin --
+1 Cedar lined hanging lockers with automatic lights (Guest Cabin)
+5 Cedar lined drawers (Guest Cabin)
+1 Mirrored door vanity cabinet (Guest Cabin)
+1 Queen size bed (Guest Cabin)
+1 Banquette seat with storage (Guest Cabin)
+2 Brass reading lights (Guest Cabin)
+-- Hull --
 1  Bimini Sunbrella  --Installed: 2014
 6  Custom made canvas covers for deck hatches. --Installed: 2004
 6  Lewmar deck hatches with screens --Installed: 1989
@@ -37,17 +62,17 @@
 1 20 pound fiberglass propane tank on pushpit --Installed: 2015
 300 ft 3/8" galvanized chain --Installed: 2015
 1 32" Teak trimmed stainless steel steering wheel --Installed: 1989
- Aft Cabin
 15 All floor hatches and storage hatches fitted with positive locks --Installed: 2012
 1 Articulating bow anchor roller --Installed: 2014
 1 Blue hull filled, long boarded, and painted (Awlgrip) --Installed: 2012
 1 Boat bottom sanded to fiberglass, filled and sanded, 2 coats epoxy barrier paint, and 2 coats hard TransOceanic anti-fouling bottom paint --Installed: 2018
-1 Boston clock --Installed: 1989
 1 Cabin top gell coated --Installed: 2018
 1 Cockpit cushions recovered --Installed: 2018
 1 Custom designed cockpit pedestal --Installed: 1989
 1 Exterior teak varnished with Epifane varnish --Installed: 1989
-4 Hanging lockers with automatic lights --Installed: 1989
+1 Flagship Marine Security deck activated intruder alarm --Installed: 2010
+1 Fresh water deck outlet --Installed: 2009
+1 Galleymate 1500 BBQ (propane) --Installed: 2010
 1 Hard solid fiberglass dodger  --Installed: 2014
  LED lighting mostly throughout interior of boat --Installed: 2010
 1 Lewmar forward hatch --Installed: 2012
@@ -58,7 +83,7 @@
 1 set Removable cockpit sunscreens --Installed: 2015
 1 Removable half-cockpit Sunbrella enclosure with large zippered windows --Installed: 2015
 1 Rocna 40 kg galvanized anchor (re-galvanized 2016) --Installed: 2009
- Rudder
+ Skeg Rudder
 2 Salon Captain's Chairs
 1 Salon Wine Cabinet
 1 Salon Wine Cabinet Top
@@ -75,6 +100,16 @@
 1 Teak rub-rail with S/S strake plate. --Installed: 1989
 1 Toe rail and hand hold Sunbrella covers --Installed: 2017
 1 Varnished teak toe rail. --Installed: 1989
+-- Master Cabin --
+2 Cedar lined hanging lockers with automatic lights (Master Cabin) --Installed: 1989
+1 Queen size bed (Master Cabin)
+4 Cedar lined drawers (Master Cabin)
+2 Banquette seats with storage (Master Cabin)
+2 Small storage lockers (Master Cabin)
+1 Mirrored vanity table & storage (Master Cabin)
+1 Swiveling vanity seat (Master Cabin)
+2 Brass reading lights (Master Cabin)
+-- Mech --
 1  Lewmar 5-Button Windlass & Thruster Wireless Remote Kit --Installed: 2015
 1 1.5 inch stainless steel drive shaft --Installed: 2018
 1 Atwood 10.5 gallon water heater, 110 volt & engine driven --Installed: 2006
@@ -86,8 +121,6 @@
 1 Drive shaft Drive Saver --Installed: 2012
 1 Drive shaft line cutter --Installed: 2012
 2 Energy 1 NSB-130FT Bow Thruster Batteries --Installed: 2015
-1 Independent Frigoboat DC keel cooled freezer with digital controls --Installed: 2010
-1 Independent Frigoboat DC keel cooled refrigerator with digital controls --Installed: 2010
 1 LasDrop dripless stuffing box --Installed: 2012
 1 Lemar Remote Isolater --Installed: 2015
 1 Lewmar 250T Bow Thruster --Installed: 2015
@@ -96,13 +129,12 @@
 1 Lewmar Thruster Control Cable --Installed: 2015
 1 Lewmar TT250 Bowthruster motor assembly --Installed: 2015
 1 Marin 1200 BTU air conditioner/heat pump --Installed: 2018
-1 Marin Keypad Display --Installed: 2018
+1 Marin A/C Keypad Display --Installed: 2018
 1 MaxProp Classic feathering propeller (factory rebuilt 2015) --Installed: 2003
 1 Maxwell 3500 VWC3500 Solonoid Box --Installed: 2015
 1 Maxwell VWC 3500 windless w/remote control  --Installed: 2012
 1 Maxwell VWC 3500 windless w/remote control, factory serviced (2014) --Installed: 2012
 1 Navigation instruments fan --Installed: 2013
-1 Nicro solar galley ventilator --Installed: 2018
 1 Racor duplex fuel filter system --Installed: 2010
 1 Reverso oil transfer pump for Yanmar and Onan --Installed: 2010
 1 Sanitary hoses replaced --Installed: 2012
@@ -116,6 +148,7 @@
 4 WEMA water tank and fuel gauges --Installed: 2015
 1 Whale Twist swim platform fresh hot and cold water shower --Installed: 2017
 11 Yamaha E15D 2 stroke 15 hp outboard motor (used) --Installed: 2016
+-- Nav --
 3 Hella NaviLED PRO 2 Mile Navigation Lamps --Installed: 2012
 1  Garmin GHS 20 Handset --Installed: 2015
 1 Autopilot Garmin Class B Compact Drive Unit --Installed: 2015
@@ -140,7 +173,7 @@
 1 Metz 3ft VHF Antenna --Installed: 2015
 1 Navigation station alarm siren --Installed: 2011
 1 OMG Tricolor LED with photodiode Top of Mast Light --Installed: 2015
-1 Flagship Marine Security deck activated intruder alarm --Installed: 2010
+-- Safety --
 1  Emergency life sling. --Installed: 2003
 1  Emergency tiller. --Installed: 1989
 5  Five fire extinguishers. --Installed: 2003
@@ -148,7 +181,7 @@
 1 ACR 406 MHz Globalfix EPIR --Installed: 2009
 1 ACR 406 MHz Globalfix Pro EPIR w/hydrostatic release --Installed: 2009
 2 ACR ResQLink Buoyant 406 MHz Personal Locator Beacon --Installed: 2012
-2 Adjustable boat hooks --Installed: 2010
+1 Adjustable boat hooks --Installed: 2018
 1 ATN Mast Climber --Installed: 2010
 1 Bilge water level alarm --Installed: 2010
 1 DSB Deutshce Schlauchboot GmbH 6 man life raft w/rigid container--requires re-certification --Installed: 2009
@@ -162,6 +195,7 @@
 1 Switlik MOB-8A man overboard --requires re-certification --Installed: 2009
 7 TalyorMade Blue Big B 10" X 28" fenders --Installed: 2010
 7 Coast Guard Approved Off-Shore Llife jackets --Installed: 2010
+-- Sails --
 2 40 ST Andersen above deck variable speed electric winches  --Installed: 2013
 2 62 ST Andersen above deck variable speed electric winches  --Installed: 2013
 2 Adjustable AmSteel-Blue running backstays  --Installed: 2013
@@ -178,6 +212,6 @@
 1 Rebuilt in-mast furler --Installed: 2013
 1 Schaefer 3100 Genoa furler  --Installed: 2014
 1 Shaefer 2100 staysail furler (-30%) --Installed: 2014
-1 Boston barometer
-1 Boston Clock
-1 Fresh water deck outlet --Installed: 2009
+-- Salon --
+1 Boston brass barometer (Salon)
+1 Boston brass clock (Salon)

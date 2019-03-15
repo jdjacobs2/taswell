@@ -1,4 +1,5 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
+# used by import_photos.py
 
 import os
 import os.path as path

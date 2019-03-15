@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# used by regenerate-site.py
 
 import csv
 import os.path
@@ -10,6 +11,7 @@ import re
 reObj = re.compile(r"^ *\[('([_\w]*)')", re.M)
 match = reObj.match("")
 
+# changes - to _ and copies images to /localhost/src/img
 remove_dash.remove_dash()
 
 # subprocess.run('exiftool', '-a') produce a csv file
