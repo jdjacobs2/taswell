@@ -1,4 +1,5 @@
 import {renderThumbnail, renderLightBoxPhoto} from "./renderItem";
+import 'jquery';
 
 import '../img/IMG_3933.jpg';
 import '../img/IMG_3951.jpg';
@@ -139,38 +140,45 @@ const data = [
 ];
 // end insert import
 
+function hashchanged() {
+  // alert($('#storyCollapse').attr('id'));
+  $('#storyCollapse').each(function () {
+    $(this).addClass('show');
+  });
+}
 
+function openStory() {
+  const hash = window.location.hash;
+  if (hash) {
+    hashchanged();
+  } else {
+    alert('home page');
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let thumbnailList, accordion, photoPhotos;
+let thumbnailList, accordion, photoPhotos, story;
 
 const load = () => {
   thumbnailList = document.querySelector('#thumbnails');
   accordion = document.querySelector('#accordionEx');
   photoPhotos = document.querySelector('#photoPhotos');
 
+  window.addEventListener('hashchange', hashchanged);
   accordion.addEventListener('click', (e) => {
     let el = e.target.dataset.action;
     if (el === 'photo') {
       renderGallery(data, photoPhotos);
     }
   });
+
+  openStory();
 }
 
 window.onload = load;
+
+
+
+
 
 let clicked = false;  // only once renderGallery
 const renderGallery = (data, location) => {
