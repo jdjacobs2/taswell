@@ -151,9 +151,7 @@ function openStory() {
   const hash = window.location.hash;
   if (hash) {
     hashchanged();
-  } else {
-    alert('home page');
-  }
+  } 
 }
 
 let thumbnailList, accordion, photoPhotos, story;
